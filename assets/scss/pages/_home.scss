@@ -1,22 +1,27 @@
 /** __Home */
 .contenedor {
-    width: 960px;
+    @include mixin_responsive;
+    width: $width-xl;
     margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
 
-    .contenido {
-        width: 960px;
+    &__contenido {
+        @include mixin_responsive;
+        width: $width-xl;
         margin: 0 auto;
 
-        .listad-noticias {
+        &__listado-noticias {
             width: 700px;
             float: left;
-            .noticia {
+
+            &__noticia {
                 width: 210px;
                 display: inline-block;
                 margin: 5px;
                 cursor: pointer;
 
-                .cuerpo {
+                &__cuerpo {
                     img {
                         width: 210px;
                         height: 300px;
@@ -28,16 +33,19 @@
             }
         }
 
-        .listado-izquierdo {
+        &__listado-izquierdo {
             width: 220px;
             float: right;
-            .cabecera-listado {
+
+            &__cabecera-listado {
                 width: 220px;
                 border-bottom: 1px solid gray;
             }
-            .tags {
+
+            &__tags {
                 border-bottom: 1px solid gray;
                 ul {
+                    display: flex;
                     padding: 0;
                     list-style: none;
                     li {
@@ -48,18 +56,25 @@
                     }
                 }
             }
-            .noticias-destacadas {
+
+            &__noticias-destacadas {
                 margin-bottom: 50px;
                 img {
                     width: 220px;
                     height: 200px;
                 }
             }
+
+            /** Celular */
+            @media (min-width: 0px) and (max-width: $width-md) {
+                display: none;
+            }
         }
     }
-    .newsletter {
+    &__newsletter {
         @include mixins_sample;
-        width: 960px;
+        @include mixin_responsive;
+        width: $width-xl;
         background-color: #f2f4f5;
         text-align: center;
         padding-top: 30px;
@@ -68,7 +83,7 @@
         h2 {
             font-size: 24px;
         }
-        .group {
+        &__group {
             input {
                 @include mixins_sample;
             }
@@ -79,4 +94,7 @@
             }
         }
     }
+    
 }
+
+

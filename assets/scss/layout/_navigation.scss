@@ -1,7 +1,9 @@
 /** __Navigation */
 .menu {
-    width: 960px;
+    @include mixin_responsive;
+    width: $width-xl;
     padding: 10px;
+    margin: 0 auto;
     border-bottom: 1px solid gray;
 
     .logo {
@@ -15,11 +17,18 @@
         display: inline-block;
         width: 840px;
         text-align: right;
-        ul li a {
-            text-decoration: none;
-            text-transform: uppercase;
-            .input-menu {
-                border-radius: 30px;
+        ul {
+            display: inline-flex;
+            list-style: none;
+            li {
+                padding: 0 0.5rem 0 0.5rem;
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    .input-menu {
+                        border-radius: 30px;
+                    }
+                }
             }
         }
     }

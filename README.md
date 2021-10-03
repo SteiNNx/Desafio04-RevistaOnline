@@ -1,6 +1,6 @@
 # **Desafio Tienda XDA**
-Desarrollo Desafio 3 Modulo 02 CSS Avanzado
-[Ver Sitio](https://steinnx.github.io/Desafio03-TiendaXDA/)
+Desarrollo Desafio 4 Modulo 02 CSS Avanzado
+[Ver Sitio](https://steinnx.github.io/Desafio04-RevistaOnline/)
 ## **Compilar SCSS**
 
 * Directo con sass

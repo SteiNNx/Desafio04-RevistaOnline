@@ -4,3 +4,10 @@
     padding: 0;
     list-style: none;
 }
+
+@mixin mixin_responsive {
+    /** Celular */
+    @media (min-width: 0px) and (max-width: $width-md) {
+        width: $width-md;
+    }
+}
